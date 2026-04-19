@@ -1,0 +1,10 @@
+{
+    "exclusive": false,
+    "layer": "top",
+    "position": "left",
+    "height": 30,
+    "spacing": 4, 
+    "modules-center": [
+        "niri/workspaces"
+    ]
+}
