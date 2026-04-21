@@ -274,6 +274,7 @@ layout {
 // which may be more convenient to use.
 // See the binds section below for more spawn examples.
 
+spawn-at-startup "/usr/lib/polkit-kde-authentication-agent-1"
 spawn-at-startup "swayosd-server"
 spawn-at-startup "waybar" "-c" "/home/dedeye/.config/waybar/top/config.jsonc"
 spawn-at-startup "waybar" "-c" "/home/dedeye/.config/waybar/left/config.jsonc"
@@ -375,7 +376,7 @@ binds {
     Mod+D hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
     Mod+E hotkey-overlay-title="Open a File Manager" { spawn "dolphin"; }
-    Mod+B hotkey-overlay-title="Open a Browser" { spawn "chromium"; }
+    Mod+B hotkey-overlay-title="Open a Browser" { spawn "zen-browser"; }
     Mod+Escape hotkey-overlay-title="Open a Mission Center" { spawn "missioncenter"; }
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
