@@ -277,7 +277,7 @@ layout {
 spawn-at-startup "/usr/lib/polkit-kde-authentication-agent-1"
 spawn-at-startup "swayosd-server"
 spawn-at-startup "waybar" "-c" "/home/dedeye/.config/waybar/top/config.jsonc"
-spawn-at-startup "waybar" "-c" "/home/dedeye/.config/waybar/left/config.jsonc"
+spawn-at-startup "waybar" "-c" "/home/dedeye/.config/waybar/side/config.jsonc"
 spawn-at-startup "swaybg" "-i" "/home/dedeye/Pictures/Wallpapers/Desktop/Morskie Oko (2880x1620).jpg"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
