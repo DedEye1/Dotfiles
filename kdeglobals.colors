@@ -140,13 +140,14 @@ LastUsedCustomAccentColor=39,226,98
 UseSystemBell=true
 
 [Icons]
-Theme=Papirus-Dark
+Theme=breeze-dark
 
 [KDE]
 LookAndFeelPackage=org.kde.breezedark.desktop
 ShowDeleteCommand=false
 contrast=4
 frameContrast=0.2
+widgetStyle=qt6ct-style
 
 [KFileDialog Settings]
 Allow Expansion=false

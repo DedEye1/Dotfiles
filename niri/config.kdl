@@ -9,8 +9,18 @@
 prefer-no-csd true
 
 environment {
-    QT_QPA_PLATFORMTHEME "kde"
+    QT_QPA_PLATFORMTHEME "qt6ct"
     GTK_THEME "Adwaita:dark"
+}
+
+overview {
+    backdrop-color "#2f7d5b" // Делаем фон полностью прозрачным
+}
+
+gestures {
+    hot-corners {
+        off
+    }
 }
 
 input {
@@ -174,7 +184,7 @@ layout {
         // - CSS-like notation: "rgb(255, 127, 0)", rgba(), hsl() and a few others.
 
         // Color of the ring on the active monitor.
-        // active-color "#3b8a7d"
+        active-color "#2f7d5b"
 
         // Color of the ring on inactive monitors.
         //
@@ -189,7 +199,7 @@ layout {
         // You can use any CSS linear-gradient tool on the web to set these up.
         // Changing the color space is also supported, check the wiki for more info.
         //
-        active-gradient from="#cbbfa6" to="#2f7d5b" angle=45 relative-to="window"
+        //active-gradient from="#cbbfa6" to="#2f7d5b" angle=45 relative-to="window"
 
         // You can also color the gradient relative to the entire view
         // of the workspace, rather than relative to just the window itself.
@@ -375,7 +385,7 @@ binds {
     Mod+T hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
     Mod+D hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
-    Mod+E hotkey-overlay-title="Open a File Manager" { spawn "dolphin"; }
+    Mod+E hotkey-overlay-title="Open a File Manager" { spawn "thunar"; }
     Mod+B hotkey-overlay-title="Open a Browser" { spawn "zen-browser"; }
     Mod+Escape hotkey-overlay-title="Open a Mission Center" { spawn "missioncenter"; }
 
@@ -409,7 +419,7 @@ binds {
     // Open/close the Overview: a zoomed-out view of workspaces and windows.
     // You can also move the mouse into the top-left hot corner,
     // or do a four-finger swipe up on a touchpad.
-    Mod+O repeat=false { toggle-overview; }
+    Mod+A repeat=false { toggle-overview; }
 
     Mod+Q repeat=false { close-window; }
 

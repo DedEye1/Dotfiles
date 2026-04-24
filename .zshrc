@@ -80,9 +80,17 @@ source $ZSH/oh-my-zsh.sh
 
 bindkey '^H' backward-kill-word
 
+NEWLINE=$'\n'
+PROMPT="${PROMPT}${NEWLINE}"
+
 alias ls='lsd -lag'
 alias niriconf='nvim $HOME/dotfiles/niri/config.kdl'
 alias zshconf='nvim $HOME/dotfiles/.zshrc'
 alias kittyconf='nvim $HOME/dotfiles/kitty/kitty.conf'
+alias dotfiles='cd $HOME/dotfiles'
 
 fastfetch
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

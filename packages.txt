@@ -12,6 +12,7 @@ waybar
 xwayland-satellite
 xdg-desktop-portal-gtk
 xdg-desktop-portal-gnome
+qt6ct
 
 Console:
 zsh
@@ -21,7 +22,7 @@ cmatrix
 nvim
 lsd
 
-Window utils:
+Utils:
 kde-polkit-agent
 dolphin
 mission-center
@@ -36,3 +37,4 @@ Yay:
 zen-browser-bin
 ayugram-desktop-bin
 throne-bin
+onlyoffice-bin

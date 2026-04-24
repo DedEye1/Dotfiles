@@ -6,26 +6,28 @@
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
+        "custom/power",
         "cpu",
         "memory",
-	"temperature"
+	"temperature",
+        "niri/window"
         // "custom/media"
     ],
     "modules-center": [
-        "niri/window"
+        "clock"
     ],
     "modules-right": [
         "mpd",
-        "idle_inhibitor",
+        "tray",
         "pulseaudio",
-        "network",
         "backlight",
         "niri/language",
-        "battery",
-        "tray",
-        "clock",
-        "custom/power"
+        "network",
+        "battery"
     ],
+    "niri/window": {
+	"tooltip": false	
+    },
     // Modules configuration
     // "sway/workspaces": {
     //     "disable-scroll": true,
@@ -95,27 +97,27 @@
     },
     "clock": {
         // "timezone": "America/New_York",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
+        "format": "{:%H:%M}",
+	"format-alt": "{:%d.%m.%Y}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
     },
     "cpu": {
-        "format": "{usage}% ",
-        "tooltip": false
+        "format": ""
     },
     "memory": {
-        "format": "{}% "
+        "format": ""
     },
     "temperature": {
         // "thermal-zone": 2,
         // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
         "critical-threshold": 80,
-        // "format-critical": "{temperatureC}°C {icon}",
-        "format": "{temperatureC}°C {icon}",
+        "format-critical": "{temperatureC}°C {icon}",
+        "format": "{icon}",
         "format-icons": ["", "", ""]
     },
     "backlight": {
         // "device": "acpi_video1",
-        "format": "{percent}% {icon}",
+        "format": "{icon}",
         "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
     "battery": {
@@ -128,7 +130,6 @@
         "format-full": "{capacity}% {icon}",
         "format-charging": "{capacity}% ",
         "format-plugged": "{capacity}% ",
-        "format-alt": "{time} {icon}",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
         "format-icons": ["", "", "", "", ""]
@@ -146,20 +147,19 @@
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "{ipaddr}/{cidr} ",
-        "tooltip-format": "{ifname} via {gwaddr} ",
+        "format-wifi": "({signalStrength}%) ",
+        "format-ethernet": "",
+	"tooltip": false,
         "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        "format-disconnected": "⚠"
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon} {format_source}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format": "{icon} {format_source}",
+        "format-bluetooth": "{icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
         "format-muted": " {format_source}",
-        "format-source": "{volume}% ",
+        "format-source": "",
         "format-source-muted": "",
         "format-icons": {
             "headphone": "",
@@ -185,15 +185,15 @@
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     },
     "custom/power": {
-        "format" : "⏻ ",
+        "format" : "⏻",
 	"tooltip": false,
 	"menu": "on-click",
 	"menu-file": "$HOME/.config/waybar/top/power_menu.xml", // Menu file in resources folder
 	"menu-actions": {
-		"shutdown": "shutdown",
+		"shutdown": "poweroff",
 		"reboot": "reboot",
 		"suspend": "systemctl suspend",
-		"hibernate": "systemctl hibernate"
+		"hibernate": "systemctl hibernate",
 	}
     }
 }
