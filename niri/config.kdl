@@ -1,4 +1,5 @@
 include "noctalia.kdl"
+include "noctalia-utils.kdl"
 
 prefer-no-csd true
 
@@ -83,7 +84,7 @@ layout {
     focus-ring {
         width 4
 
-        active-color "#2f7d5b"
+        // active-color "#2f7d5b"
 
         //active-gradient from="#cbbfa6" to="#2f7d5b" angle=45 relative-to="window"
 
@@ -150,19 +151,6 @@ window-rule {
 }
 
 binds {
-    // Core Noctalia binds
-    Mod+Space { spawn-sh "noctalia msg panel-toggle launcher"; }
-    Mod+S { spawn-sh "noctalia msg panel-toggle control-center"; }
-    Mod+Comma { spawn-sh "noctalia msg settings-toggle"; }
-    Alt+Tab { spawn-sh "noctalia msg window-switcher"; }
-
-    // Audio & Brightness
-    XF86AudioRaiseVolume { spawn-sh "noctalia msg volume-up"; }
-    XF86AudioLowerVolume { spawn-sh "noctalia msg volume-down"; }
-    XF86AudioMute { spawn-sh "noctalia msg volume-mute"; }
-    XF86MonBrightnessUp { spawn-sh "noctalia msg brightness-up"; }
-    XF86MonBrightnessDown { spawn-sh "noctalia msg brightness-down"; }
-
     Mod+Shift+Slash { show-hotkey-overlay; }
 
     Mod+T hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }

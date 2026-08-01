@@ -1,19 +1,35 @@
-layer-rule {
-  match namespace="^noctalia-backdrop"
-  place-within-backdrop true
+layout {
+
+    focus-ring {
+        active-color   "#8ad6b6"
+        inactive-color "#0f1512"
+        urgent-color   "#ffb4ab"
+    }
+
+    border {
+        active-color   "#8ad6b6"
+        inactive-color "#0f1512"
+        urgent-color   "#ffb4ab"
+    }
+
+    shadow {
+        color "#00000070"
+    }
+
+    tab-indicator {
+        active-color   "#8ad6b6"
+        inactive-color "#00513b"
+        urgent-color   "#ffb4ab"
+    }
+
+    insert-hint {
+        color "#8ad6b680"
+    }
 }
 
-spawn-at-startup "noctalia"
-
-// Floating Noctalia settings window.
-window-rule {
-  match app-id="dev.noctalia.Noctalia"
-  open-floating true
-  default-column-width { fixed 1080; }
-  default-window-height { fixed 920; }
-}
-
-debug {
-  // Allows notification actions and window activation from Noctalia.
-  honor-xdg-activation-with-invalid-serial
+recent-windows {
+    highlight {
+        active-color "#8ad6b6"
+        urgent-color "#ffb4ab"
+    }
 }
