@@ -83,22 +83,12 @@ layout {
 
     focus-ring {
         width 4
-
-        // active-color "#2f7d5b"
-
-        //active-gradient from="#cbbfa6" to="#2f7d5b" angle=45 relative-to="window"
-
-        // inactive-gradient from="#505050" to="#808080" angle=45 relative-to="window"
     }
 
     border {
         off
 
         width 4
-        active-color "#ffc87f"
-        inactive-color "#505050"
-
-        urgent-color "#9b0000"
     }
 
     shadow {
@@ -154,7 +144,6 @@ binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
     Mod+T hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
-    Mod+D hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
     Mod+E hotkey-overlay-title="Open a File Manager" { spawn "thunar"; }
     Mod+B hotkey-overlay-title="Open a Browser" { spawn "zen-browser"; }
@@ -315,13 +304,12 @@ binds {
     // Mod+Space       { switch-layout "next"; }
     // Mod+Shift+Space { switch-layout "prev"; }
 
-    Print { screenshot; }
-    Ctrl+Print { screenshot-screen; }
+    // Print { screenshot; }
+    // Ctrl+Print { screenshot-screen; }
     Alt+Print { screenshot-window; }
 
     Mod+Backspace allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
 
-    Mod+Shift+E { quit; }
     Ctrl+Alt+Delete { quit; }
 
     Mod+Shift+P { power-off-monitors; }
