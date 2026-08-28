@@ -515,7 +515,7 @@ scale = 1.0
 [plugin_settings]
 
 [plugins]
-auto_update = true
+auto_update = "all"
 enabled = [ "noctalia/kaomoji", "tadomika_ari/w-engine", "yocraft/web-launcher" ]
 
     [[plugins.source]]
