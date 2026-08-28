@@ -16,6 +16,7 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 bindkey '^H' backward-kill-word
+export EDITOR='code'
 
 NEWLINE=$'\n'
 PROMPT="${PROMPT}${NEWLINE}"
