@@ -1,3 +1,16 @@
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.histfile
+HISTSIZE=50000
+SAVEHIST=1000
+setopt autocd beep extendedglob nomatch notify
+bindkey -e
+# End of lines configured by zsh-newuser-install
+# The following lines were added by compinstall
+zstyle :compinstall filename '/home/dedeye/.zshrc'
+
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
 export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="agnoster"
@@ -16,19 +29,22 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 bindkey '^H' backward-kill-word
+
 export EDITOR='code'
+export DOTFILES=$HOME/dotfiles
 
 NEWLINE=$'\n'
 PROMPT="${PROMPT}${NEWLINE}"
 
-alias ls='lsd -lag'
-alias niriconf='nvim $HOME/dotfiles/niri/config.kdl'
-alias zshconf='nvim $HOME/dotfiles/.zshrc'
-alias kittyconf='nvim $HOME/dotfiles/kitty/kitty.conf'
-alias dotfiles='cd $HOME/dotfiles'
-alias yazi='y'
-
 fastfetch
+
+alias ls='lsd -lag'
+alias niriconf='nvim $DOTFILES/niri/config.kdl'
+alias zshconf='nvim $DOTFILES/.zshrc'
+alias zshreload='source $HOME/.zshrc'
+alias kittyconf='nvim $DOTFILES/kitty/kitty.conf'
+alias cddotfiles='cd $DOTFILES'
+alias yazi='y'
 
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
