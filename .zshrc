@@ -43,7 +43,7 @@ alias niriconf='nvim $DOTFILES/niri/config.kdl'
 alias zshconf='nvim $DOTFILES/.zshrc'
 alias zshreload='source $HOME/.zshrc'
 alias kittyconf='nvim $DOTFILES/kitty/kitty.conf'
-alias cddotfiles='cd $DOTFILES'
+alias dotfilescd='cd $DOTFILES'
 alias yazi='y'
 
 function y() {
