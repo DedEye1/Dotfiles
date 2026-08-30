@@ -5,7 +5,6 @@ prefer-no-csd true
 
 environment {
     QT_QPA_PLATFORMTHEME "qt6ct"
-    GTK_THEME "Adwaita:dark"
 }
 
 overview {
