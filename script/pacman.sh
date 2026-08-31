@@ -1,4 +1,4 @@
-DATA="$DOTFILES/script-data"/*
+DATA="$HOME/dotfiles/script-data"/*
 
 for file in $DATA; do
     filename=$(basename "$file")
