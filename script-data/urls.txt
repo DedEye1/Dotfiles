@@ -1,0 +1,4 @@
+# Happ
+https://github.com/Happ-proxy/happ-desktop/releases/latest/download/Happ.linux.x64.pkg.tar.zst
+# Vimix icon
+https://github.com/vinceliuice/Vimix-icon-theme.git

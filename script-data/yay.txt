@@ -1,0 +1,4 @@
+zen-browser-bin
+ayugram-desktop-bin
+onlyoffice-bin
+qt6ct-kde

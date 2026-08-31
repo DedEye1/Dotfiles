@@ -1,0 +1,4 @@
+sddm
+noctalia
+nwg-look
+breeze

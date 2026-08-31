@@ -1,0 +1,10 @@
+zsh
+kitty
+fastfetch
+cava
+cmatrix
+nvim
+lsd
+bluez
+bluez-utils
+wget

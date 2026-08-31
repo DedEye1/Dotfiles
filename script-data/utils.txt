@@ -1,0 +1,6 @@
+mission-center
+gwenview
+dragon
+virtualbox
+prismlauncher
+steam
