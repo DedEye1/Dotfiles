@@ -20,7 +20,7 @@ debug {
 
 binds {
     // Core Noctalia binds
-    Mod+Shift+Escape { spawn-sh "noctalia msg panel-toggle session"; }
+    Mod+Shift+E { spawn-sh "noctalia msg panel-toggle session"; }
     Mod+D { spawn-sh "noctalia msg panel-toggle launcher"; }
     Print { spawn-sh "noctalia msg screenshot-region"; }
     Ctrl+Print { spawn-sh "noctalia msg screenshot-fullscreen"; }
