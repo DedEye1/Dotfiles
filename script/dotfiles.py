@@ -34,4 +34,4 @@ paths={
 
 for entry in paths:
     paths[entry].remove_file()
-    paths[entry].link_file
+    paths[entry].link_file()
