@@ -77,13 +77,13 @@ layout {
     default-column-width { proportion 0.5; }
 
     focus-ring {
-        width 4
+        width 2
     }
 
     border {
         off
 
-        width 4
+        width 2
     }
 
     shadow {
